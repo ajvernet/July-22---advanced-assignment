@@ -12,6 +12,8 @@ public class MethodsAndFlow {
 	public void outputSubset(int startPosition, int numberOfValues)
 	{
 		
+		int stopPosition = (startPosition + numberOfValues);
+		
 		// check that startPosition is valid before proceeding
 		if(startPosition < 0 || startPosition > stringArray.length || startPosition > numberOfValues)
 		{
@@ -22,16 +24,18 @@ public class MethodsAndFlow {
 		{
 			
 			//ensure that numberOfValues is not greater than length of array
-			if(numberOfValues > stringArray.length)
+			if(stopPosition > stringArray.length)
 			{
-				numberOfValues = stringArray.length;
+				stopPosition = stringArray.length;
 			}
 			
 			//output requested values
-			for(int i = startPosition; i < numberOfValues; i++)
+			for(int i = startPosition; i < stopPosition; i++)
 			{
-				System.out.println(stringArray[i]);
+				System.out.print(stringArray[i] + " ");
 			}
+			
+			System.out.println();
 		}
 		
 	}

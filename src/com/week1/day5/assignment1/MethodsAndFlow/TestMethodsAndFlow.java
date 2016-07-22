@@ -2,23 +2,23 @@ package com.week1.day5.assignment1.MethodsAndFlow;
 
 public class TestMethodsAndFlow {
 
-	private MethodsAndFlow test1;
-	
-	// provide the stringArray value to test1 by reading 
-	// in values from the command line (in main method)
-	
-	public TestMethodsAndFlow(String[] stringArray)
-	{
-		test1 = new MethodsAndFlow(stringArray);
-		
-	}
-		
-		public static void main(String[] args) {
+
+		public static void main(String[] args) 
+		{
 		// TODO Auto-generated method stub
+			MethodsAndFlow test1 = new MethodsAndFlow(args);
 			
-			TestMethodsAndFlow testMain = new TestMethodsAndFlow(args);
-		
-		
-	}
+			test1.outputAll();
+			
+			test1.outputSubset(0, 4);
+			
+			//testing for incorrect inputs in the 
+			// outputSubset method
+			test1.outputSubset(-10, 3);
+			
+			test1.outputSubset(5,  4);
+			
+			test1.outputSubset(0, 30);
+		}
 
 }
